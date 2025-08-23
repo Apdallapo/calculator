@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+   <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    
+  </head>
+  <style>
+    *{
+       padding: 0;
+       margin: 0;
+    }
+    body{
+      background-color: rgb(9, 9, 9);
+     
+
+    }
+
+    .pragraph-A{
+color: rgba(169, 163, 163, 0.721);
+font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.pragraph-B{
+color: rgb(238, 228, 240);
+text-align: center;
+font-size: 50px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+.pragraph-C{
+  color: wheat;
+  text-align: center;
+  font: 1em sans-serif;
+  margin-bottom: 10%;
+}
+.pragraph-footer{
+  color:rgb(132, 132, 132);
+  text-align: center;
+  margin-top: 5%;
+}
+.pragraph{
+color: white;
+font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+.button-A{
+  border: 0;
+  font-weight: bold;
+  margin: 5px;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #605f5eea;
+  height: 60px;
+  width: 60px;
+  font-size: 20px;
+}
+.button-B{
+  color: white;
+  font-weight: bold;
+  background-color: rgba(231, 158, 14, 0.906);
+  border: 0;
+  padding: 10px;
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+  font-size: 20px;
+}
+.A{
+   padding: 1px;
+}
+  </style>
+  <body>
+<h1 class="pragraph-B"> Calculator</h1>
+    <p class="pragraph-A">Creative Apdalla apdukadir has created his first Calculator project.</p>
+    <P class="pragraph-C">Calculate whiout ads, or parchaise.</P>
+    <p class="js-calculate pragraph"></p>
+    <p>
+    <button onclick="
+     updateCalculation('1')
+      " class="button-A">1</button>
+    <button  onclick="
+    updateCalculation('2')
+      "  class="button-A">2</button>
+    <button 
+    
+     onclick="
+    updateCalculation('3')
+      " class="button-A">3</button>
+    <button 
+     onclick="
+    updateCalculation('+')
+      " class="button-B">+</button>
+      </p>
+      <p>
+        <button  onclick="
+    updateCalculation('4')
+      " class="button-A">4</button>
+       <button  onclick="
+   updateCalculation('5')
+      " class="button-A">5</button> 
+      <button  onclick="
+    updateCalculation('6')
+      " class="button-A">6</button>
+     <button  onclick="
+    updateCalculation('-')
+      " class="button-B">-</button>
+      </p>
+      <p> 
+         <button  onclick="
+    updateCalculation('7')
+      " class="button-A">7</button>
+      <button  onclick="
+    updateCalculation('8')
+      " class="button-A">8</button>
+      <button  onclick="
+    updateCalculation('9')
+      " class="button-A">9</button>
+      <button  onclick="
+    updateCalculation('*')
+      " class="button-B">*</button>
+      </p>
+      <p>
+         <button  onclick="
+    updateCalculation('0');
+      " class="button-A">0</button>
+       <button  onclick="
+   updateCalculation('.')
+      " class="button-A">.</button>
+      <button  onclick="
+    calculation = eval(calculation);
+      document.querySelector('.js-calculate').innerHTML = calculation;
+      localStorage.setItem('calculation' , calculation);
+      " class="button-A">=</button>
+       <button  onclick="
+    updateCalculation('/')
+      " class="button-B">/</button>
+    </p>
+     <button  onclick="
+ calculation  = '';
+  document.querySelector('.js-calculate').innerHTML = calculation;
+ localStorage.setItem('calculation' , calculation);
+      " class="button-A A">clear</button>
+       <button  onclick="
+ calculation  = calculation.slice(0, -1);
+  document.querySelector('.js-calculate').innerHTML = calculation;
+ localStorage.setItem('calculation' , calculation);
+      " class="button-A">X</button>
+    
+  </body>
+  <footer class="pragraph-footer">2025 @This Simple calculator was creared by apdalla poi.</footer>
+   </html>
+  <script>
+    let calculation =  localStorage.getItem('calculation') || "";
+    function updateCalculation(value) {
+     calculation += value;
+     document.querySelector('.js-calculate').innerHTML = calculation;
+     localStorage.setItem('calculatoin', calculation);
+    }
+  </script>
+</html>
